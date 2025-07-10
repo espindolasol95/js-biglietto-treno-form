@@ -23,8 +23,8 @@ finalPriceù = basePrice - basePrice * 20 / 100;
 }else if (eta >65) {
     finalPrice= basePrice - basePrice * 40 / 100;
  
-}else (){
+}else {
 finalPrice = basePrice;
 
 }
-
+console.log ('Il prezzo del biglietto è di' `${finalPrice}`)
