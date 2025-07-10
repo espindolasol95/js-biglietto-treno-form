@@ -27,4 +27,4 @@ finalPriceù = basePrice - basePrice * 20 / 100;
 finalPrice = basePrice;
 
 }
-console.log ('Il prezzo del biglietto è di' `${finalPrice}`)
+console.log (`Il prezzo del biglietto è di ${finalPrice}`)
