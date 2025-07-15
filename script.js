@@ -6,14 +6,14 @@
 //va applicato uno sconto del 20% per i minorenni
 //va applicato uno sconto del 40% per gli over 65.
 
-const calculate= document.getElementById ('calculate')
-const result =document.getElementById ('results')
+const calculate=document.getElementById ('calculate')
+const result=document.getElementById ('result')
 
 calculate.addEventListener ('click', (e) => {
  e.preventDefault();
 
- const km= document.getElementById('km').value;
- const age= document.getElementById('age').value; 
+ const km=document.getElementById('km').value;
+ const age=document.getElementById('age').value; 
 
 
  //richiesta all' utente
@@ -21,21 +21,25 @@ calculate.addEventListener ('click', (e) => {
 
  //const Km= parseFloat(prompt('Quanti km vuoi percorrere?'));
  //const eta= parseFloat(prompt('Quanti anni hai?')); 
- //questa variabile conterrà il prezzo finale da mostrare
- let finalPrice;
+ 
  //calcolo prezzo Base
  const basePrice= 0.21 * km;
+ //questa variabile conterrà il prezzo finale da mostrare
+ let finalPrice;
 
  // sconto apliicato in base alla età
- if (age <18){
+ if(age <18){
  finalPrice = basePrice - basePrice * 20 / 100;
 
- }else if (age >65) {
+ }else if(age >65) {
     finalPrice= basePrice - basePrice * 40 / 100;
   
- }else {
+ }else{
  finalPrice = basePrice;
 
  }
- console.log (`Il prezzo del biglietto è di ${finalPrice. toFixed (2)}`)
+ console.log(`Il prezzo del biglietto è di ${finalPrice.toFixed(2)}`);
+ result.innerText = `Km percorsi: ${km}, età del passeggero: ${age},  Il prezzo del biglietto è di: ${finalPrice.toFixed(2)}`
+
 })
+
